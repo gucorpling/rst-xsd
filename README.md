@@ -1,7 +1,8 @@
 # rst-xsd
 [XSD schemas](https://en.wikipedia.org/wiki/XML_Schema_%28W3C%29) for 
 [Rhetorical Structure Theory](https://en.wikipedia.org/wiki/Rhetorical_structure_theory)
-XML files. Use these schemas to ensure that your RST XML files are 
+XML files. Use these schemas to ensure that your RST XML files are what you
+expect them to be.
 
 # Usage
 
