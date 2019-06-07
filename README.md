@@ -4,6 +4,12 @@
 XML files. Use these schemas to ensure that your RST XML files are what you
 expect them to be.
 
+# Changes
+If you are a developer who has extended the RST XML format somehow and would
+like to have your updates reflected in the `rst-xsd` schema, that's great!
+Please either open an issue describing your changes, or open a pull request with
+an updated `.xsd`.
+
 # Usage
 
 ## Validation
