@@ -52,7 +52,7 @@
   <xs:element name="header">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="encoding" use="optional"/>
+        <xs:element ref="encoding" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="relations"/>
       </xs:sequence>
     </xs:complexType>
