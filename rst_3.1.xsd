@@ -71,7 +71,7 @@
   <xs:element name="header">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="encoding" use="optional"/>
+        <xs:element ref="encoding" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="relations"/>
       </xs:sequence>
     </xs:complexType>
@@ -81,7 +81,7 @@
       <xs:sequence>
         <xs:element ref="segment" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element ref="group" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="signals"/>
+        <xs:element ref="signals" maxOccurs="1" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
