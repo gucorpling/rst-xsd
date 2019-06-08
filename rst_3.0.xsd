@@ -1,10 +1,20 @@
-<xs:schema version="3.1.0" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema version="3.0" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="rel">
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:string">
           <xs:attribute type="xs:string" name="name" use="optional"/>
           <xs:attribute type="xs:string" name="type" use="optional"/>
+          <xs:attribute type="xs:string" name="schema" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="encoding">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="name"/>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
@@ -14,18 +24,6 @@
       <xs:sequence>
         <xs:element ref="rel" maxOccurs="unbounded" minOccurs="0"/>
       </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="signal">
-    <xs:complexType>
-      <xs:simpleContent>
-        <xs:extension base="xs:string">
-          <xs:attribute type="xs:byte" name="source" use="optional"/>
-          <xs:attribute type="xs:string" name="type" use="optional"/>
-          <xs:attribute type="xs:string" name="subtype" use="optional"/>
-          <xs:attribute type="xs:string" name="tokens" use="optional"/>
-        </xs:extension>
-      </xs:simpleContent>
     </xs:complexType>
   </xs:element>
   <xs:element name="segment">
@@ -51,16 +49,10 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="signals">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="signal" maxOccurs="unbounded" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="header">
     <xs:complexType>
       <xs:sequence>
+        <xs:element ref="encoding" use="optional"/>
         <xs:element ref="relations"/>
       </xs:sequence>
     </xs:complexType>
@@ -70,7 +62,6 @@
       <xs:sequence>
         <xs:element ref="segment" maxOccurs="unbounded" minOccurs="0"/>
         <xs:element ref="group" maxOccurs="unbounded" minOccurs="0"/>
-        <xs:element ref="signals"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

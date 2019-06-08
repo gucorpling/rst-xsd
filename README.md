@@ -16,16 +16,16 @@ an updated `.xsd`.
 Download the XSD schema, then use a tool like `xmllint` to validate your XML:
 
 ```
-wget https://raw.githubusercontent.com/gucorpling/rst-xsd/master/rst_3.1.0.xsd
-xmllint --schema rst_3.1.0.xsd myfile.rs3
+wget https://raw.githubusercontent.com/gucorpling/rst-xsd/master/rst_3.1.xsd
+xmllint --schema rst_3.1.xsd myfile.rs3
 ```
 
 # Release notes 
-## 3.1.0
+## 3.1
 - Add support for the `<signals>` body element used by
   [rstWeb](http://github.com/amir-zeldes/rstWeb).
 
-## 3.0.0
+## 3.0
 - Modeled after the `.rs3` file format used by
   [RSTTool](http://www.wagsoft.com/RSTTool/)
 
